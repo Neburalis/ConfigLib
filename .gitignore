@@ -32,3 +32,6 @@ bin/
 
 ### JavaDoc ###
 javadoc/
+
+### Maven ###
+target/
