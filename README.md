@@ -1,5 +1,9 @@
 # ConfigLib - Библиотека для работы с конфигурациями
 
+[![](https://jitpack.io/v/Neburalis/ConfigLib.svg)](https://jitpack.io/#Neburalis/ConfigLib)
+![Java](https://img.shields.io/badge/Java-11+-orange.svg)
+![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
+
 Библиотека для работы с конфигурациями на Java с поддержкой статической типизации, горячего обновления и сложных типов данных в XML формате.
 
 ## Возможности
