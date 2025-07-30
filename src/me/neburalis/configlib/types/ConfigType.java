@@ -18,7 +18,27 @@
 package me.neburalis.configlib.types;
 
 /**
- * Перечисление всех поддерживаемых типов данных конфига
+ * Перечисление всех поддерживаемых типов данных конфигурации.
+ * 
+ * <p>Этот enum определяет все типы данных, которые поддерживает библиотека.
+ * Каждый тип имеет строковое представление, используемое в XML файлах.</p>
+ * 
+ * <p><strong>Поддерживаемые типы:</strong></p>
+ * <ul>
+ *   <li><strong>STRING:</strong> обычные строки</li>
+ *   <li><strong>NUMBER:</strong> целые и дробные числа</li>
+ *   <li><strong>BOOLEAN:</strong> логические значения</li>
+ *   <li><strong>DURATION:</strong> временные интервалы</li>
+ *   <li><strong>URL:</strong> веб-адреса</li>
+ *   <li><strong>EMAIL:</strong> email адреса</li>
+ *   <li><strong>LARGE_NUMBER:</strong> большие числа с суффиксами (1k, 1m, 1b)</li>
+ *   <li><strong>SCIENTIFIC_NUMBER:</strong> научная нотация (1e-8)</li>
+ *   <li><strong>ARRAY:</strong> типизированные массивы</li>
+ * </ul>
+ * 
+ * @author Neburalis
+ * @version 0.1.0
+ * @since 0.1.0
  */
 public enum ConfigType {
     STRING("string"),
@@ -37,6 +57,12 @@ public enum ConfigType {
         this.name = name;
     }
     
+    /**
+     * Получить строковое представление типа.
+     * Используется в XML файлах для указания типа значения.
+     * 
+     * @return строковое имя типа
+     */
     public String getName() {
         return name;
     }

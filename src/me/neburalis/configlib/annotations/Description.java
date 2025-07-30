@@ -23,13 +23,41 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Аннотация для описания значений в конфиге
+ * Аннотация для описания значений в конфигурации.
+ * 
+ * <p>Эта аннотация позволяет добавлять описания к полям и методам,
+ * которые будут сохранены в XML файле как атрибуты description.
+ * Это полезно для документирования конфигурации.</p>
+ * 
+ * <p><strong>Использование:</strong></p>
+ * <pre>{@code
+ * @Description("Порт сервера для HTTP соединений")
+ * private int serverPort = 8080;
+ * 
+ * @Description("Максимальное количество одновременных соединений")
+ * public void setMaxConnections(int max) {
+ *     // реализация
+ * }
+ * }</pre>
+ * 
+ * <p><strong>Почему используется аннотация:</strong></p>
+ * <ul>
+ *   <li>Декларативность: описание привязано к коду</li>
+ *   <li>Автоматизация: можно автоматически генерировать документацию</li>
+ *   <li>Типобезопасность: проверяется на этапе компиляции</li>
+ * </ul>
+ * 
+ * @author Neburalis
+ * @version 0.1.0
+ * @since 0.1.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Description {
     /**
-     * Описание значения
+     * Описание значения.
+     * 
+     * @return строковое описание
      */
     String value();
 } 
