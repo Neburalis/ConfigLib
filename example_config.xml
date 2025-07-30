@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <server>
+    <host type="string" description="Хост сервера">localhost</host>
+    <port type="number" description="Порт сервера">8080</port>
+    <enabled type="boolean">true</enabled>
+    <timeout type="duration" description="Таймаут соединения">30s</timeout>
+    <max_connections type="large_number" description="Максимальное количество соединений">1k</max_connections>
+    <memory_limit type="scientific_number" description="Лимит памяти в байтах">1e9</memory_limit>
+  </server>
+  <notify>
+    <email type="array" description="Email для уведомлений">
+      <li type="email">admin@example.com</li>>
+      <li type="email">admin2@example.com</li>>
+      <li type="email">admin3@example.com</li>>
+    </email>
+    <webhook_urls type="array" description="Webhook URLs">
+      <li type="url">https://webhook1.example.com</li>
+      <li type="url">https://webhook2.example.com</li>
+    </webhook_urls>
+    <ports type="array" description="Порты для мониторинга">
+      <li type="number">8080</li>
+      <li type="number">9090</li>
+      <li type="number">5347</li>
+    </ports>
+  </notify>
+  <database>
+    <name type="string">mydb</name>
+    <url type="url">127.0.0.1</url>
+    <port type="number">5342</port>
+    <connection_pool_size type="number" description="Размер пула соединений">10</connection_pool_size>
+    <connection>
+      <timeout type="duration">5s</timeout>
+      <retry_count type="number">3</retry_count>
+    </connection>
+  </database>
+  <logging>
+    <level type="string">INFO</level>
+    <file type="string">app.log</file>
+    <max_size type="large_number">100m</max_size>
+  </logging>
+</configuration> 

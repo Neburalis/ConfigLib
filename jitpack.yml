@@ -1,0 +1,9 @@
+jdk:
+  - openjdk11
+  
+before_install:
+  - echo "Подготовка к сборке ConfigLib"
+  
+install:
+  - echo "Сборка ConfigLib через Maven"
+  - mvn clean compile install -DskipTests 
